@@ -1,0 +1,63 @@
+# Copy to config.yaml and adjust. Relative paths resolve against this file.
+# Every key is optional; environment variables (ANP_*) override it, see README.
+sources_file: sources.yaml
+db_path: data/news.sqlite
+state_dir: data/state
+
+# Language of headlines, blurbs and the takeaway. Translate the category
+# labels below to match it.
+output_language: English
+
+llm:
+  backend: mock            # mock | anthropic | command
+  # anthropic: credentials come from the SDK's usual env vars (ANTHROPIC_API_KEY ...)
+  models:
+    score: claude-haiku-5-5
+    verify: claude-sonnet-5-5
+    brief: claude-sonnet-5-5
+  effort: {score: low, verify: medium, brief: medium}
+  # command: any CLI that reads the prompt on stdin and prints JSON
+  command: ""
+  # the command gets only PATH, HOME, locale and these variables, never the
+  # pipeline's own secrets; list what your client needs for its login
+  command_env: []
+  timeout_s: 300
+  quota_cooldown_minutes: 60   # used when the provider gives no reset time
+
+ingest:
+  per_source_limit: 30
+
+score:
+  batch_limit: 200
+  weights: {relevance: 0.5, actionability: 0.3, novelty: 0.2}
+
+verify:
+  top_k: 30
+
+brief:
+  window_hours: 24
+  min_relevance: 6
+  max_items: 8
+  max_per_category: 3
+  max_per_source: 2
+  repost_cooldown_hours: 36
+  require_verified: true   # only items the verify stage passed; false = scores alone
+  title: "AI news brief - {date}"
+  disclosure: "AI-generated: selected, summarised and posted automatically by software, without human review."
+  # banned_phrases: [game-changer, revolutionary, ...]   # default list in stages/brief.py
+
+categories:
+  models: New models & LLMs
+  agents: AI agents & automation
+  devtools: Developer tools
+  research: Research
+  tutorial: Guides & tutorials
+  content: Content generation
+  startup: Startups & products
+  nocode: No-code
+  other: Other
+
+sinks:
+  - {type: console}
+  - {type: file, dir: data/briefs}
+  # - {type: telegram}   # needs TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID in the environment

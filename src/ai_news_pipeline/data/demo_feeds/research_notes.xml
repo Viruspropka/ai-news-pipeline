@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Synthetic Atom feed for the offline demo. All content is invented. -->
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Example Research Notes</title>
+  <id>https://notes.example.org/</id>
+  <updated>2026-03-10T18:00:00Z</updated>
+  <entry>
+    <title>Retrieval-augmented generation with small models: paper and code</title>
+    <link href="https://notes.example.org/2026/rag-small-models"/>
+    <id>https://notes.example.org/2026/rag-small-models</id>
+    <updated>2026-03-10T08:00:00Z</updated>
+    <summary>We propose a retrieval pipeline that lets a 3B model match larger ones on a RAG benchmark. The paper is on arXiv; code and dataset are on GitHub.</summary>
+  </entry>
+  <entry>
+    <title>How to build an eval harness for LLM agents</title>
+    <link href="https://notes.example.org/2026/agent-evals"/>
+    <id>https://notes.example.org/2026/agent-evals</id>
+    <updated>2026-03-10T11:00:00Z</updated>
+    <summary>A step by step tutorial with a notebook: fixtures, graders and regression tracking for LLM agent evals.</summary>
+  </entry>
+  <entry>
+    <title>A new open-source CLI for prompt regression tests</title>
+    <link href="https://notes.example.org/2026/prompt-ci"/>
+    <id>https://notes.example.org/2026/prompt-ci</id>
+    <updated>2026-03-10T16:00:00Z</updated>
+    <summary>Released today: an open-source CLI that runs prompt regression tests against any LLM API in CI.</summary>
+  </entry>
+  <entry>
+    <title>Spring gardening notes</title>
+    <link href="https://notes.example.org/2026/garden"/>
+    <id>https://notes.example.org/2026/garden</id>
+    <updated>2026-03-10T07:00:00Z</updated>
+    <summary>Tomatoes, basil and a new raised bed.</summary>
+  </entry>
+</feed>

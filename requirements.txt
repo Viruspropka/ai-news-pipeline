@@ -1,0 +1,9 @@
+# Pinned set the tests were run with (Python 3.12). `pip install -r requirements.txt`
+# installs these plus the package itself (editable), so `ai-news-pipeline` and pytest work.
+# The anthropic SDK is optional at runtime (only the `anthropic` backend needs it); it is
+# pinned here so the SDK wire test runs too.
+feedparser==6.0.14
+PyYAML==6.0.3
+anthropic==2.8.0
+pytest>=8,<10
+-e .

@@ -1,0 +1,138 @@
+# Labelled cases for `ai-news-pipeline eval`. Synthetic items written to look
+# like real feed entries; labels are what a careful human editor would decide,
+# written BEFORE running any backend on them.
+#   verdict:   pass | hype | dubious | thin   (expected verify verdict)
+#   relevance: high (>= 6, belongs in an AI-engineering brief) | low (< 6)
+cases:
+  - id: open-weights-release
+    source_weight: 1.5
+    title: Releasing Corvid-13B with open weights
+    summary: Corvid-13B is an open-weight LLM; weights and an eval harness are on GitHub, and a benchmark table compares it with models of similar size.
+    verdict: pass
+    relevance: high
+  - id: sdk-mcp
+    source_weight: 1.4
+    title: Agent toolkit 2.0 adds MCP servers and tool use
+    summary: Version 2.0 of the agent toolkit ships MCP server support, streaming tool use and a CLI. Release notes and code samples are in the repo.
+    verdict: pass
+    relevance: high
+  - id: rag-paper
+    source_weight: 1.0
+    title: Late-interaction retrieval for long documents
+    summary: The paper on arXiv shows a retrieval method for RAG over long documents, with code and a public benchmark.
+    verdict: pass
+    relevance: high
+  - id: eval-tutorial
+    source_weight: 1.3
+    title: How to write regression evals for LLM agents
+    summary: A tutorial with a notebook that builds graders, fixtures and a CI job for agent evals.
+    verdict: pass
+    relevance: high
+  - id: inference-server
+    source_weight: 1.2
+    title: Inference server adds speculative decoding
+    summary: The open-source inference server now supports speculative decoding; the changelog lists a 1.8x throughput gain on a public benchmark.
+    verdict: pass
+    relevance: high
+  - id: tokenizer-lib
+    source_weight: 1.0
+    title: A faster tokenizer library for multilingual models
+    summary: New open source tokenizer written in Rust, pip install fasttok; benchmark numbers in the README.
+    verdict: pass
+    relevance: high
+  - id: vendor-embedding-api
+    source_weight: 1.5
+    title: New embedding model in our API
+    summary: Our API now serves a new embedding model with lower price per token and better retrieval scores on a public eval.
+    verdict: pass
+    relevance: high
+  - id: hype-agi
+    source_weight: 0.8
+    title: This AI changes everything - AGI by summer
+    summary: A revolutionary assistant that will replace programmers, according to its founder. No details were shared.
+    verdict: hype
+    relevance: high
+  - id: hype-game-changer
+    source_weight: 0.8
+    title: The game-changer LLM every company needs
+    summary: An unprecedented model that is a game changer for business, says the launch post. Pricing on request.
+    verdict: hype
+    relevance: high
+  - id: hype-mind-blowing
+    source_weight: 0.9
+    title: Mind-blowing agent does your whole job
+    summary: An agent startup claims its product is revolutionary and will replace entire teams. Waitlist only.
+    verdict: hype
+    relevance: high
+  - id: dubious-leak
+    source_weight: 0.7
+    title: Leaked benchmark shows secret model beating everything
+    summary: A leaked screenshot allegedly shows an unreleased model topping every leaderboard. Insiders say launch is next week.
+    verdict: dubious
+    relevance: high
+  - id: dubious-rumour
+    source_weight: 0.8
+    title: Rumour - big lab to open-source its flagship LLM
+    summary: According to a rumour on social media, a big lab will publish its flagship model weights. No source confirms it.
+    verdict: dubious
+    relevance: high
+  - id: dubious-clickbait
+    source_weight: 0.6
+    title: You won't believe what this chatbot said
+    summary: A shocking conversation with an AI model went viral. Screenshot only.
+    verdict: dubious
+    relevance: low
+  - id: thin-hire
+    source_weight: 1.2
+    title: AI lab hires new chief operating officer
+    summary: The LLM company appoints a new COO who previously led operations at a cloud provider.
+    verdict: thin
+    relevance: low
+  - id: thin-partnership
+    source_weight: 1.1
+    title: Model maker partners with consulting firm
+    summary: The model maker partners with a consulting firm to bring its LLM agents to enterprise clients.
+    verdict: thin
+    relevance: high
+  - id: thin-office
+    source_weight: 1.0
+    title: Agent startup opens new office in Lisbon
+    summary: The agent startup announced a new office and plans to grow the team.
+    verdict: thin
+    relevance: low
+  - id: thin-webinar
+    source_weight: 1.0
+    title: Join our webinar on AI agents in finance
+    summary: A webinar about AI agents for finance teams, hosted by our partners next month.
+    verdict: thin
+    relevance: high
+  - id: offtopic-garden
+    source_weight: 1.0
+    title: Notes from the allotment
+    summary: Tomatoes, beans and a new compost bin.
+    verdict: thin
+    relevance: low
+  - id: offtopic-crypto
+    source_weight: 0.8
+    title: Token prices fall after exchange outage
+    summary: Crypto token prices dropped after a large exchange went offline for three hours.
+    verdict: thin
+    relevance: low
+  - id: listicle
+    source_weight: 0.8
+    title: Top 10 ChatGPT prompts you need to know
+    summary: A roundup of prompts for marketing copy.
+    verdict: thin
+    relevance: low
+  - id: subtle-hype-with-repo
+    source_weight: 1.0
+    title: A revolutionary approach to agent memory
+    summary: The post calls it revolutionary, but it ships an open-source repo with code and a benchmark against two baselines.
+    verdict: pass
+    relevance: high
+  - id: subtle-thin-no-artefact
+    source_weight: 1.0
+    title: Why reasoning models matter for the enterprise
+    summary: An opinion essay on reasoning models and what leaders should think about them.
+    verdict: thin
+    relevance: high

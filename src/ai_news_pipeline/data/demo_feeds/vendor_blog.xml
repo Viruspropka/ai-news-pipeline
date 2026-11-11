@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Synthetic feed for the offline demo. All names, URLs and claims are invented. -->
+<rss version="2.0">
+  <channel>
+    <title>Example Vendor Blog</title>
+    <link>https://vendor.example.com/blog</link>
+    <description>Synthetic vendor announcements</description>
+    <item>
+      <title>Introducing Nimbus-7B, an open-weight reasoning model</title>
+      <link>https://vendor.example.com/blog/nimbus-7b?utm_source=rss</link>
+      <description>&lt;p&gt;We are releasing Nimbus-7B, an open-weight language model for reasoning tasks. Weights are on our GitHub repo together with a reproducible benchmark eval; &lt;code&gt;pip install nimbus-run&lt;/code&gt; runs inference locally.&lt;/p&gt;</description>
+      <pubDate>Tue, 10 Mar 2026 09:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Our agent SDK now speaks MCP</title>
+      <link>https://vendor.example.com/blog/agent-sdk-mcp</link>
+      <description>The new SDK release adds MCP tool use for agents, with code samples and a CLI for local testing. Available today via pip install.</description>
+      <pubDate>Tue, 10 Mar 2026 12:30:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Example Vendor partners with Example Cloud</title>
+      <link>https://vendor.example.com/blog/partnership</link>
+      <description>Example Vendor partners with Example Cloud to bring its LLM agents to more enterprise customers next quarter.</description>
+      <pubDate>Tue, 10 Mar 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>An entry without a link is skipped by the adapter</title>
+      <description>No link element here.</description>
+      <pubDate>Tue, 10 Mar 2026 16:00:00 GMT</pubDate>
+    </item>
+  </channel>
+</rss>

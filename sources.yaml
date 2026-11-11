@@ -1,0 +1,46 @@
+# Example source list: public feeds about AI engineering (checked 2026-11-11).
+# Schema per entry:
+#   slug     unique kebab-case id (store key)
+#   name     label shown in briefs
+#   type     adapter type (rss covers RSS and Atom)
+#   weight   multiplies the composite score, 0.1..3.0 (primary sources > aggregators)
+#   enabled  false keeps the entry documented but skips it
+#   config   adapter options: exactly one of `url` (http/https) or `path` (local file)
+sources:
+  - slug: huggingface-blog
+    name: Hugging Face Blog
+    type: rss
+    weight: 1.4
+    config: {url: https://huggingface.co/blog/feed.xml}
+
+  - slug: openai-news
+    name: OpenAI News
+    type: rss
+    weight: 1.4
+    config: {url: https://openai.com/blog/rss.xml}
+
+  - slug: deepmind-blog
+    name: Google DeepMind Blog
+    type: rss
+    weight: 1.4
+    config: {url: https://deepmind.google/blog/rss.xml}
+
+  - slug: simon-willison
+    name: Simon Willison's Weblog
+    type: rss
+    weight: 1.3
+    config: {url: https://simonwillison.net/atom/everything/}
+
+  - slug: hn-llm
+    name: Hacker News (LLM, 100+ points)
+    type: rss
+    weight: 1.0
+    config: {url: "https://hnrss.org/newest?q=LLM&points=100"}
+
+  # High volume: enable when you want research coverage and a larger score budget.
+  - slug: arxiv-cs-cl
+    name: arXiv cs.CL
+    type: rss
+    weight: 0.8
+    enabled: false
+    config: {url: https://rss.arxiv.org/rss/cs.CL}

@@ -1,0 +1,23 @@
+# Offline demo sources: local synthetic feeds, no network.
+sources:
+  - slug: example-vendor
+    name: Example Vendor Blog
+    type: rss
+    weight: 1.5
+    config: {path: demo_feeds/vendor_blog.xml}
+  - slug: example-research
+    name: Example Research Notes
+    type: rss
+    weight: 1.2
+    config: {path: demo_feeds/research_notes.xml}
+  - slug: hype-daily
+    name: AI Hype Daily
+    type: rss
+    weight: 0.8
+    config: {path: demo_feeds/hype_daily.xml}
+  # Deliberately broken: shows that one failing source never stops the run.
+  - slug: unreachable-feed
+    name: Unreachable Feed
+    type: rss
+    weight: 1.0
+    config: {path: demo_feeds/does_not_exist.xml}

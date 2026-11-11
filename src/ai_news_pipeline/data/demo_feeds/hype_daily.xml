@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Synthetic aggregator feed: re-posts, hype and rumours. All content is invented. -->
+<rss version="2.0">
+  <channel>
+    <title>AI Hype Daily</title>
+    <link>https://hype.example.net/</link>
+    <description>Synthetic aggregator</description>
+    <item>
+      <title>This revolutionary model changes everything about AGI</title>
+      <link>https://hype.example.net/posts/revolutionary-model</link>
+      <description>A revolutionary new LLM model that changes everything. Commentators say AGI is close.</description>
+      <pubDate>Tue, 10 Mar 2026 10:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Nimbus-7B is here (via Example Vendor)</title>
+      <link>https://www.vendor.example.com/blog/nimbus-7b/?utm_medium=social&amp;ref=hype#comments</link>
+      <description>Re-post of the vendor announcement.</description>
+      <pubDate>Tue, 10 Mar 2026 10:30:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Our agent SDK now speaks MCP</title>
+      <link>https://hype.example.net/repost/agent-sdk</link>
+      <description>The new SDK release adds MCP tool use for agents, with code samples and a CLI for local testing. Available today via pip install.</description>
+      <pubDate>Tue, 10 Mar 2026 13:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Leaked: insiders say a secret agent model is coming</title>
+      <link>https://hype.example.net/posts/leaked-agent-model</link>
+      <description>Insiders say a secret agent model will ship soon, allegedly with reasoning far beyond anything public.</description>
+      <pubDate>Tue, 10 Mar 2026 14:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Top 10 prompts you need to know</title>
+      <link>https://hype.example.net/posts/top-10-prompts</link>
+      <description>A weekly roundup of prompts for chat assistants.</description>
+      <pubDate>Tue, 10 Mar 2026 17:00:00 GMT</pubDate>
+    </item>
+  </channel>
+</rss>
